@@ -8,10 +8,10 @@ let documentMy = {
     footer: "",
     date: "",
     application: {
-        headerApp: "",
-        bodyApp: "",
-        footerApp: "",
-        dateApp: "",
+        header: {headerApp: ""},
+        body: {bodyApp: ""},
+        footer: {footerApp: ""},
+        date: {dateApp: ""},
     },
 
     show: function () {
@@ -21,10 +21,10 @@ let documentMy = {
         document.write("Footer: " + `${this.footer}` + "<br/>");
         document.write("Date: " + `${this.date}` + "<br/>" + "<hr/>");
         document.write("Application: " + "<br/>" + "<br/>" + 
-        "Header: " + `${this.application.headerApp}` + "<br/>");
-        document.write("Body: " + "<br/>" + `${this.application.bodyApp}` + "<br/>");
-        document.write("Footer: " + `${this.application.footerApp}` + "<br/>");
-        document.write("Date: " + `${this.application.dateApp}` + "<br/>");
+        "Header: " + `${this.application.header.headerApp}` + "<br/>");
+        document.write("Body: " + "<br/>" + `${this.application.body.bodyApp}` + "<br/>");
+        document.write("Footer: " + `${this.application.footer.footerApp}` + "<br/>");
+        document.write("Date: " + `${this.application.date.dateApp}` + "<br/>");
     },
     changeWork: function (header, body, footer, date,
         headerApp, bodyApp, footerApp, dateApp) {
@@ -32,10 +32,10 @@ let documentMy = {
         this.body = body;
         this.footer = footer;
         this.date = date;
-        this.application.headerApp = headerApp;
-        this.application.bodyApp = bodyApp;
-        this.application.footerApp = footerApp;
-        this.application.dateApp = dateApp;
+        this.application.header.headerApp = headerApp;
+        this.application.body.bodyApp = bodyApp;
+        this.application.footer.footerApp = footerApp;
+        this.application.date.dateApp = dateApp;
     },
   
 };
